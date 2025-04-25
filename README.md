@@ -1,5 +1,62 @@
 # java-moni
-tester prometheus et grafana
+tester prometheus et grafana avec application JAVA
+
+Steps:
+depot app:
+https://github.com/spring-projects/spring-petclinic.git
+
+note : repo is safe
+✅ Source officielle : Maintenu par Spring Projects, l’équipe qui développe le framework Spring, un des plus populaires pour les applications Java.
+✅ Utilisé à des fins pédagogiques : C’est une application de démonstration pour montrer les bonnes pratiques de Spring Boot (architecture, test, persistance, etc.).
+✅ Code open source : Il est ouvert à la communauté, très surveillé et régulièrement mis à jour.
+✅ Pas de dépendances malicieuses : Toutes les dépendances sont standards (Spring, H2, JPA, etc.) et gérées via Maven avec des versions bien connues.
+
+conseils secu:
+Conseils de vérification (par bonne habitude) :
+Même si ce projet est sûr, voici quelques réflexes à garder pour n’importe quel repo :
+🔎 Vérifie les auteurs/mainteneurs (ici : spring-projects)
+📅 Regarde l’activité récente du dépôt (commits, issues)
+🧪 Jette un œil au fichier pom.xml pour voir les dépendances
+📁 Lancer d’abord en local dans un environnement isolé (ex: Docker ou VM)
+
+builder image docker :
+probleme avec cmd : ./mvnw spring-boot:build-image
+debug 
+docker version
+docker info
+dockerd ou Laisse cette commande tourner dans un terminal, ou exécute-la en arrière-plan avec nohup dockerd &
+docker ps
+
+docker login a docker.hub
+$docker login
+root@mBELHADI1-PC:~# docker tag spring-petclinic:3.4.0-SNAPSHOT mohamedbelhedi/spring-petclinic:latest
+root@mBELHADI1-PC:~# docker push mohamedbelhedi//spring-petclinic:latest
+
+
+
+*
+*
+*
+*
+
+instlataion prometheus
+conf dans java : dependency
+
+instllation grafana
+contournement instlataion et lancement grafana
+
+Lancer Grafana directement (sans systemctl) : manuellement
+sudo /usr/sbin/grafana-server --homepath=/usr/share/grafana
+http://localhost:3000 (admin/admin)
+
+probleme restart prometheus , sln restart manuellement:
+pkill prometheus
+./prometheus --config.file=prometheus.yml &
+
+
+stresser l'app:
+sudo apt install wrk
+
 
 avant stresse
 ![image](https://github.com/user-attachments/assets/74af8c03-7f61-4037-8b3d-affb43e3aae3)
