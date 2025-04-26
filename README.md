@@ -1,5 +1,5 @@
 # java-monitoring [Prometheus + Grafana]
-tester prometheus et grafana avec application JAVA
+tester prometheus et grafana pour une application JAVA avec MicroK8s : minikube
 
 Steps:
 depot app:
@@ -100,7 +100,15 @@ Tu vas recevoir une IP externe directe.
 
 3-Utiliser un Ingress Controller ( non testé)
 
-************* Commandes et notes utiles **********
+<h1>Autoscalling</h1>
+Installe metrics-server :
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+ajouter hpa.yaml(voir git)
+kubectl apply -f hpa.yaml
+kubectl get hpa
+
+
+Commandes et notes utiles
 trouver un fichier avec extension spec : 
 find /home/mohamed/projets/app_java/spring-petclinic -name '*.jar'
 
