@@ -71,3 +71,23 @@ wrk -t5 -c40000 -d400s http://localhost:8080/
 
 ![image](https://github.com/user-attachments/assets/77a3864c-e4cf-4da4-998d-a3c2e998b265)
 
+Tester l'app sur K8s:
+Démarrer Minikube (dans WSL2) :
+minikube start --driver=docker
+![image](https://github.com/user-attachments/assets/a4a8c95f-71c6-4367-aa0f-67516e206ad1)
+
+🛠️ Construire ton image Docker
+Creer Dockerfile pour ton app Java
+Vérifier que ton app tourne en local : docker run -p 8080:8080 mon-app-java:v1
+
+
+
+Commandes et notes utiles:
+trouver un fichier avec extension spec : 
+find /home/mohamed/projets/app_java/spring-petclinic -name '*.jar'
+
+Dockerfile j'ai eu des soucis avec le chemin absolu , donc j'ai utilisé le chemin relatif.
+Alternative Microk8s : https://microk8s.io/compare
+
+kubectl delete deployment mon-app-java
+kubectl apply -f deployment.yaml
