@@ -32,12 +32,16 @@ $docker login
 root@mBELHADI1-PC:~# docker tag spring-petclinic:3.4.0-SNAPSHOT mohamedbelhedi/spring-petclinic:latest
 root@mBELHADI1-PC:~# docker push mohamedbelhedi//spring-petclinic:latest
 
+*
+*
+*
+*
+Run l'app depuis maven:
+![image](https://github.com/user-attachments/assets/24ae9d28-6061-43c0-ba37-6d7ba215685e)
 
-
-*
-*
-*
-*
+DB H2:
+![image](https://github.com/user-attachments/assets/c15dafe7-5dee-4543-8dba-b858eec4707d)
+conf db :
 
 instlataion prometheus
 conf dans java : dependency
@@ -56,17 +60,13 @@ pkill prometheus
 
 stresser l'app:
 sudo apt install wrk
-
-
 avant stresse
 ![image](https://github.com/user-attachments/assets/74af8c03-7f61-4037-8b3d-affb43e3aae3)
-
 stresse:
 wrk -t5 -c40000 -d400s http://localhost:8080/
 -t = threads
 -c = connexions simultanées
 -d = durée
-
 ![image](https://github.com/user-attachments/assets/d0b29eb5-bc99-4cff-bafb-63d65d9b7060)
 
 ![image](https://github.com/user-attachments/assets/77a3864c-e4cf-4da4-998d-a3c2e998b265)
