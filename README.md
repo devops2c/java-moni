@@ -32,10 +32,6 @@ $docker login
 root@mBELHADI1-PC:~# docker tag spring-petclinic:3.4.0-SNAPSHOT mohamedbelhedi/spring-petclinic:latest
 root@mBELHADI1-PC:~# docker push mohamedbelhedi//spring-petclinic:latest
 
-*
-*
-*
-*
 Run l'app depuis maven:
 ![image](https://github.com/user-attachments/assets/24ae9d28-6061-43c0-ba37-6d7ba215685e)
 
