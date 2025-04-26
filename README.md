@@ -80,6 +80,32 @@ minikube start --driver=docker
 Creer Dockerfile pour ton app Java
 Vérifier que ton app tourne en local : docker run -p 8080:8080 mon-app-java:v1
 
+Micro_K8s:
+
+3 facons d acces à lapp
+1-Utiliser un Service de type NodePort avec creation tunnel entre ton pc et le service kub
+ajouter/modifer service.yml comme suite:
+type: NodePort
+nodePort: 30080
+===================
+Tu rediriges directement le port du service vers ton machine locale sans passer par Minikube ou Docker. Cela contourne tout problème potentiel de réseau ou de configuration de port.
+Donc, même si Minikube expose un port (comme 30080), kubectl port-forward te permet de tester plus rapidement et de vérifier que l'application fonctionne correctement.
+
+lancer la cmd suivante en cas de probleme:
+kubectl port-forward svc/mon-app-java-service 8080:8080
+
+2 loadbalancer
+il faut modifier service.yml comme suite:
+spec:
+  type: LoadBalancer
+  lancer la cmd : minikube tunnel
+
+Minikube va simuler un vrai LoadBalancer Cloud.
+Tu vas recevoir une IP externe directe.
+![image](https://github.com/user-attachments/assets/cefb3dc3-a570-4547-86ee-6bd48ed885cb)
+![image](https://github.com/user-attachments/assets/d61c56bf-eed1-4992-8bb8-858dca4d0672)
+
+3-Utiliser un Ingress Controller ( non testé)
 
 
 Commandes et notes utiles:
