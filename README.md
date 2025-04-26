@@ -1,4 +1,4 @@
-# java-moni
+# java-monitoring [Prometheus + Grafana]
 tester prometheus et grafana avec application JAVA
 
 Steps:
@@ -107,8 +107,7 @@ Tu vas recevoir une IP externe directe.
 
 3-Utiliser un Ingress Controller ( non testé)
 
-
-Commandes et notes utiles:
+************* Commandes et notes utiles **********
 trouver un fichier avec extension spec : 
 find /home/mohamed/projets/app_java/spring-petclinic -name '*.jar'
 
