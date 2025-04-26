@@ -40,7 +40,7 @@ Run l'app depuis maven:
 ![image](https://github.com/user-attachments/assets/24ae9d28-6061-43c0-ba37-6d7ba215685e)
 
 DB H2:
-![image](https://github.com/user-attachments/assets/c15dafe7-5dee-4543-8dba-b858eec4707d)
+![image](https://github.com/user-attachments/assets/a77c3277-1272-4706-af52-21a8f3d4dd11)
 conf db :
 
 instlataion prometheus
