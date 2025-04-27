@@ -168,9 +168,9 @@ kubectl get hpa
 ```
 
 ### Commandes utiles
-- trouver un fichier avec extension spec
+- trouver tout les fichiers sous /home/mohamed/projets/app_java/spring-petclinic avec l'extension jar
   ```
-- find /home/mohamed/projets/app_java/spring-petclinic -name '*.jar'
+  find /home/mohamed/projets/app_java/spring-petclinic -name '*.jar'
   ```
   
 ### Notes utiles
