@@ -101,7 +101,7 @@ wrk -t5 -c40000 -d400s http://localhost:8080/
 + -t = threads
 + -c = connexions simultanées
 + -d = durée 
-</br>
+
 ![image](https://github.com/user-attachments/assets/d0b29eb5-bc99-4cff-bafb-63d65d9b7060)
 ![image](https://github.com/user-attachments/assets/77a3864c-e4cf-4da4-998d-a3c2e998b265)
 
