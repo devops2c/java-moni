@@ -121,12 +121,17 @@ kubectl apply -f hpa.yaml
 kubectl get hpa
 
 
-Commandes et notes utiles
-trouver un fichier avec extension spec : 
-find /home/mohamed/projets/app_java/spring-petclinic -name '*.jar'
-
+### Commandes utiles
+- trouver un fichier avec extension spec : 
+- find /home/mohamed/projets/app_java/spring-petclinic -name '*.jar'
+  
+### Notes utiles
 Dockerfile j'ai eu des soucis avec le chemin absolu , donc j'ai utilisé le chemin relatif.
 Alternative Microk8s : https://microk8s.io/compare
+
+### Liens utiles
+- Les bases de forme de base github : https://docs.github.com/fr/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+- Complete list of github markdown emoji markup https://gist.github.com/rxaviers/7360908
 
 kubectl delete deployment mon-app-java
 kubectl apply -f deployment.yaml
