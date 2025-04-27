@@ -49,10 +49,11 @@ root@mBELHADI1-PC:~# docker tag spring-petclinic:3.4.0-SNAPSHOT mohamedbelhedi/s
 Publier votre image
 root@mBELHADI1-PC:~# docker push mohamedbelhedi//spring-petclinic:latest
 ```
-Run l'app depuis maven </br>
+Execution de l'app depuis maven </br>
 ![image](https://github.com/user-attachments/assets/24ae9d28-6061-43c0-ba37-6d7ba215685e)
 
 ### DB H2:
+H2 est un système de gestion de base de données relationnelles écrit en Java. Il peut être intégré à une application Java ou bien fonctionner en mode client-serveur. Son fichier jar est petit : environ 2.5 Mo
 ![image](https://github.com/user-attachments/assets/a77c3277-1272-4706-af52-21a8f3d4dd11)
 conf db :
 
