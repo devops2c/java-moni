@@ -1,4 +1,4 @@
-# java-monitoring [Prometheus + Grafana]
+# Java-monitoring [Prometheus + Grafana]
 ## Tester prometheus et grafana pour une application JAVA avec MicroK8s : minikube , puis Kubeadm
 ###  Date :      Avril 2025
 
@@ -191,7 +191,7 @@ Reste à faire/implementer :warning:
 - [ ] Integrer d'autres services ( DB , API ... )
 - [ ] Migration vers kubeadm ( minikube reste limité)
 
-> === Mohamed BELHEDI                ===
-> ===    *** ***** ***** ***         ===
-> === Architect Techinique           ===
-======================================
+> === Mohamed BELHEDI                === </br>
+> ===    *** ***** ***** ***         === </br>
+> === Architect Techinique           === </br>
+> ====================================== </br>
