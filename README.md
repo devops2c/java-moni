@@ -142,7 +142,7 @@ Reste à faire/implementer
 - [ ] Integrer d'autres services ( DB , API ... )
 - [ ] Migration vers kubeadm ( minikube reste limité)
 
-- === Mohamed BELHEDI                ===
-- ===    *** ***** ***** ***         ===
-- === Architect Techinique           ===
-- ======================================
+=== Mohamed BELHEDI                ===
+===    *** ***** ***** ***         ===
+=== Architect Techinique           ===
+======================================
