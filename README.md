@@ -215,8 +215,8 @@ Reste à faire/implementer :warning:
 - [ ] Migration vers kubeadm ( minikube reste limité)
 - [ ] Comprendre l'architecture K8s : Services / API , Ingress / Egress.
 
-> ====================================== </br>
-> === Mohamed BELHEDI                === </br>
-> ===    *** ***** ***** ***         === </br>
-> === Architect Techinique           === </br>
-> ====================================== </br>
+> ======================================
+> === Mohamed BELHEDI                ===
+> ===    *** ***** ***** ***         ===
+> === Architect Techinique           ===
+> ======================================
