@@ -104,7 +104,7 @@ docker run -p 8080:8080 mon-app-java:v1
 ### Micro_K8s:
 
 ### Il existe 3 facons pour acceder/utliliser à lapp
-+ 1-Utiliser un Service de type NodePort avec creation tunnel entre ton pc et le service kub
+### 1 Utiliser un Service de type NodePort avec creation tunnel entre ton pc et le service kub
 ajouter/modifer service.yml comme suite:
 ```
 type: NodePort
@@ -117,20 +117,22 @@ Lancer la cmd suivante en cas de probleme:
 ```
 kubectl port-forward svc/mon-app-java-service 8080:8080
 ```
-### + 2 loadbalancer
-il faut modifier service.yml comme suite:
+### 2 Loadbalancer
+Il faut modifier le type du fichier service.yml en type : LoadBalancer
+```
 spec:
   type: LoadBalancer
+```
   lancer la cmd : 
   ```
 minikube tunnel
 ```
-Minikube va simuler un vrai LoadBalancer Cloud.
-Tu vas recevoir une IP externe directe.
+Minikube va simuler un vrai LoadBalancer Cloud. </br>
+Tu vas recevoir une IP externe directe , dans notre cas elle est 127.0.0.1 (localhost)
 ![image](https://github.com/user-attachments/assets/cefb3dc3-a570-4547-86ee-6bd48ed885cb)
 ![image](https://github.com/user-attachments/assets/d61c56bf-eed1-4992-8bb8-858dca4d0672)
 
-3-Utiliser un Ingress Controller ( non testé)
+### 3 Utiliser un Ingress Controller ( non testé)
 
 <h1>Autoscalling</h1>
 Installe metrics-server :
