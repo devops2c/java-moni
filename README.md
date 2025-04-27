@@ -1,5 +1,15 @@
 # java-monitoring [Prometheus + Grafana] #
-#  Date :      Avril 2025                   #
+#  Date :      Avril 2025
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
 tester prometheus et grafana pour une application JAVA avec MicroK8s : minikube
 
 Steps:
@@ -118,9 +128,8 @@ Alternative Microk8s : https://microk8s.io/compare
 
 kubectl delete deployment mon-app-java
 kubectl apply -f deployment.yaml
-         *** ***** ***** ***
-======================================
-======================================
+
+
 === Mohamed BELHEDI                ===
 ===    *** ***** ***** ***         ===
 === Architect Techinique           ===
