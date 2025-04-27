@@ -1,4 +1,7 @@
-# java-monitoring [Prometheus + Grafana]
+#############################################
+#  # java-monitoring [Prometheus + Grafana] #
+#  Date :      Avril 2025                   #
+#############################################
 tester prometheus et grafana pour une application JAVA avec MicroK8s : minikube
 
 Steps:
@@ -117,3 +120,10 @@ Alternative Microk8s : https://microk8s.io/compare
 
 kubectl delete deployment mon-app-java
 kubectl apply -f deployment.yaml
+         *** ***** ***** ***
+======================================
+======================================
+=== Mohamed BELHEDI                ===
+===    *** ***** ***** ***         ===
+=== Architect Techinique           ===
+======================================
