@@ -168,8 +168,10 @@ kubectl get hpa
 ```
 
 ### Commandes utiles
-- trouver un fichier avec extension spec : 
+- trouver un fichier avec extension spec
+  ```
 - find /home/mohamed/projets/app_java/spring-petclinic -name '*.jar'
+  ```
   
 ### Notes utiles
 Dockerfile j'ai eu des soucis avec le chemin absolu , donc j'ai utilisé le chemin relatif.
