@@ -1,7 +1,5 @@
-#############################################
-#  # java-monitoring [Prometheus + Grafana] #
+# java-monitoring [Prometheus + Grafana] #
 #  Date :      Avril 2025                   #
-#############################################
 tester prometheus et grafana pour une application JAVA avec MicroK8s : minikube
 
 Steps:
