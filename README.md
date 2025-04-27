@@ -1,18 +1,14 @@
 # java-monitoring [Prometheus + Grafana] #
 #  Date :      Avril 2025
-- [x] #739
-- [ ] https://github.com/octo-org/octo-repo/issues/740
-- [ ] Add delight to the experience when all tasks are complete :tada:
 
 > [!NOTE]
-> Useful information that users should know, even when skimming content.
+> Ceci ce n'est pas un tuto mais plutot le deploiment d'une app Java et la mise en place de la chaine de supervision
+> avec les problemes rencontrés
 
-> [!TIP]
-> Helpful advice for doing things better or more easily.
 > [!IMPORTANT]
-> Key information users need to know to achieve their goal.
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
+> Il s'agit d'une montée en competence et recolte des données,bonnes pratiques afin de centraliser toutes les etapes dans un seul doc et de le partager.
+> Projet en cours ,la documentations et des elements (fonctionnalités,securités) sont des taches en cours et adaptés à fur et à mesure
+
 > [!CAUTION]
 > Advises about risks or negative outcomes of certain actions.
 tester prometheus et grafana pour une application JAVA avec MicroK8s : minikube
@@ -134,8 +130,13 @@ Alternative Microk8s : https://microk8s.io/compare
 kubectl delete deployment mon-app-java
 kubectl apply -f deployment.yaml
 
+A faire
+- [ ] Développer les tableaux de board Grafana :tada:
+- [ ] Rajouter notifications Grafana (adresse e mail test + conf smtp
+- [ ] Integrer d'autres services ( DB , API ... )
+- [ ] Migration vers kubeadm ( minikube reste limité)
 
-=== Mohamed BELHEDI                ===
-===    *** ***** ***** ***         ===
-=== Architect Techinique           ===
-======================================
+- === Mohamed BELHEDI                ===
+- ===    *** ***** ***** ***         ===
+- === Architect Techinique           ===
+- ======================================
