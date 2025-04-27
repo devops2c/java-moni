@@ -168,29 +168,30 @@ kubectl get hpa
 ```
 
 ### Commandes utiles
-- trouver tout les fichiers sous /home/mohamed/projets/app_java/spring-petclinic avec l'extension jar
+- Trouver tout les fichiers sous /home/mohamed/projets/app_java/spring-petclinic avec l'extension jar
   ```
   find /home/mohamed/projets/app_java/spring-petclinic -name '*.jar'
   ```
-  
+- Kubectl commande
+```
+kubectl delete deployment mon-app-java
+kubectl apply -f deployment.yaml
+```
 ### Notes utiles
-Dockerfile j'ai eu des soucis avec le chemin absolu , donc j'ai utilisé le chemin relatif.
-Alternative Microk8s : https://microk8s.io/compare
++ Dockerfile j'ai eu des soucis avec le chemin absolu , donc j'ai utilisé le chemin relatif.
 
 ### Liens utiles
 - Les bases de forme de base github : https://docs.github.com/fr/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 - Complete list of github markdown emoji markup https://gist.github.com/rxaviers/7360908
+- Alternative Microk8s : https://microk8s.io/compare
 
-kubectl delete deployment mon-app-java
-kubectl apply -f deployment.yaml
-
-Reste à faire/implementer
+Reste à faire/implementer :warning:
 - [ ] Développer les tableaux de board Grafana :tada:
-- [ ] Rajouter notifications Grafana (adresse e mail test + conf smtp
+- [ ] Rajouter notifications Grafana (adresse e mail test + conf smtp ...)
 - [ ] Integrer d'autres services ( DB , API ... )
 - [ ] Migration vers kubeadm ( minikube reste limité)
 
-=== Mohamed BELHEDI                ===
-===    *** ***** ***** ***         ===
-=== Architect Techinique           ===
-======================================
+> === Mohamed BELHEDI                ===
+> ===    *** ***** ***** ***         ===
+> === Architect Techinique           ===
+> ======================================
