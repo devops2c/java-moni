@@ -33,18 +33,22 @@ Même si ce projet est sûr, voici quelques réflexes à garder pour n’importe
 + Lancer d’abord en local dans un environnement isolé (ex: Docker ou VM)
 
 builder image docker :
+```
 probleme avec cmd : ./mvnw spring-boot:build-image
 debug 
 docker version
 docker info
 dockerd ou Laisse cette commande tourner dans un terminal, ou exécute-la en arrière-plan avec nohup dockerd &
 docker ps
-
-docker login a docker.hub
-$docker login
+```
+Se connecter a docker.hub
+```
+$docker login (sasis des identifiants compte docker hub)
+Taguer ton image:
 root@mBELHADI1-PC:~# docker tag spring-petclinic:3.4.0-SNAPSHOT mohamedbelhedi/spring-petclinic:latest
+Publier votre image
 root@mBELHADI1-PC:~# docker push mohamedbelhedi//spring-petclinic:latest
-
+```
 Run l'app depuis maven:
 ![image](https://github.com/user-attachments/assets/24ae9d28-6061-43c0-ba37-6d7ba215685e)
 
@@ -55,57 +59,71 @@ conf db :
 instlataion prometheus
 conf dans java : dependency
 
-instllation grafana
+Instllation grafana
 contournement instlataion et lancement grafana
 
 Lancer Grafana directement (sans systemctl) : manuellement
 sudo /usr/sbin/grafana-server --homepath=/usr/share/grafana
 http://localhost:3000 (admin/admin)
 
-probleme restart prometheus , sln restart manuellement:
+Si vous rencontrer un probleme Start/stop prometheus ,solution restart manuellement:
+```
 pkill prometheus
 ./prometheus --config.file=prometheus.yml &
-stresser l'app:
+```
+### stresser l'app:
+```
 sudo apt install wrk
-avant stresse
+```
+### Avant stresse
 ![image](https://github.com/user-attachments/assets/74af8c03-7f61-4037-8b3d-affb43e3aae3)
-stresse:
+stresse commande & argument:
+```
 wrk -t5 -c40000 -d400s http://localhost:8080/
--t = threads
--c = connexions simultanées
--d = durée
+```
++ -t = threads
++ -c = connexions simultanées
++ -d = durée
 ![image](https://github.com/user-attachments/assets/d0b29eb5-bc99-4cff-bafb-63d65d9b7060)
 ![image](https://github.com/user-attachments/assets/77a3864c-e4cf-4da4-998d-a3c2e998b265)
 
-Tester l'app sur K8s:
+Tester l'app sur Micro K8s:
 Démarrer Minikube (dans WSL2) :
+argument
 minikube start --driver=docker
+argument
 ![image](https://github.com/user-attachments/assets/a4a8c95f-71c6-4367-aa0f-67516e206ad1)
 
 🛠️ Construire ton image Docker
 Creer Dockerfile pour ton app Java
-Vérifier que ton app tourne en local : docker run -p 8080:8080 mon-app-java:v1
+Vérifier que ton app tourne en local : 
+```
+docker run -p 8080:8080 mon-app-java:v1
+```
+### Micro_K8s:
 
-Micro_K8s:
-
-3 facons d acces à lapp
-1-Utiliser un Service de type NodePort avec creation tunnel entre ton pc et le service kub
+### Il existe 3 facons pour acceder/utliliser à lapp
++ 1-Utiliser un Service de type NodePort avec creation tunnel entre ton pc et le service kub
 ajouter/modifer service.yml comme suite:
+```
 type: NodePort
 nodePort: 30080
-===================
+```
 Tu rediriges directement le port du service vers ton machine locale sans passer par Minikube ou Docker. Cela contourne tout problème potentiel de réseau ou de configuration de port.
 Donc, même si Minikube expose un port (comme 30080), kubectl port-forward te permet de tester plus rapidement et de vérifier que l'application fonctionne correctement.
 
-lancer la cmd suivante en cas de probleme:
+Lancer la cmd suivante en cas de probleme:
+```
 kubectl port-forward svc/mon-app-java-service 8080:8080
-
-2 loadbalancer
+```
+### + 2 loadbalancer
 il faut modifier service.yml comme suite:
 spec:
   type: LoadBalancer
-  lancer la cmd : minikube tunnel
-
+  lancer la cmd : 
+  ```
+minikube tunnel
+```
 Minikube va simuler un vrai LoadBalancer Cloud.
 Tu vas recevoir une IP externe directe.
 ![image](https://github.com/user-attachments/assets/cefb3dc3-a570-4547-86ee-6bd48ed885cb)
@@ -115,11 +133,12 @@ Tu vas recevoir une IP externe directe.
 
 <h1>Autoscalling</h1>
 Installe metrics-server :
+```
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 ajouter hpa.yaml(voir git)
 kubectl apply -f hpa.yaml
 kubectl get hpa
-
+```
 
 ### Commandes utiles
 - trouver un fichier avec extension spec : 
