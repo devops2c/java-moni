@@ -123,7 +123,7 @@ Il faut modifier le type du fichier service.yml en type : LoadBalancer
 spec:
   type: LoadBalancer
 ```
-  lancer la cmd : 
+Lancer la cmd : 
   ```
 minikube tunnel
 ```
@@ -134,8 +134,8 @@ Tu vas recevoir une IP externe directe , dans notre cas elle est 127.0.0.1 (loca
 
 ### 3 Utiliser un Ingress Controller ( non testé)
 
-<h1>Autoscalling</h1>
-Installe metrics-server :
+### Autoscalling
+### Installe metrics-server qui permet de superviser la charge appliquée </br>
 ```
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 ajouter hpa.yaml(voir git)
