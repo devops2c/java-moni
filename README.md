@@ -134,11 +134,31 @@ Tu vas recevoir une IP externe directe , dans notre cas elle est 127.0.0.1 (loca
 
 ### 3 Utiliser un Ingress Controller ( non testé)
 
-### Autoscalling
+## Autoscalling
 ### Installe metrics-server qui permet de superviser la charge appliquée </br>
 ```
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
-ajouter hpa.yaml(voir git)
+ajouter hpa.yaml:
+```
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: mon-app-java-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: mon-app-java   # le nom EXACT de ton deployment
+  minReplicas: 2
+  maxReplicas: 5
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 50
+```
 kubectl apply -f hpa.yaml
 kubectl get hpa
 ```
