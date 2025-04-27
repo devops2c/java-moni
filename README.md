@@ -1,20 +1,20 @@
-# java-monitoring [Prometheus + Grafana] #
-#  Date :      Avril 2025
+# java-monitoring [Prometheus + Grafana]
+## Tester prometheus et grafana pour une application JAVA avec MicroK8s : minikube
+##  Date :      Avril 2025
 
 > [!NOTE]
-> Ceci ce n'est pas un tuto mais plutot le deploiment d'une app Java et la mise en place de la chaine de supervision
+> Ceci n'est pas un tuto mais plutot le deploiment d'une app Java et la mise en place de la chaine de supervision
 > avec les problemes rencontrés
 
 > [!IMPORTANT]
 > Il s'agit d'une montée en competence et recolte des données,bonnes pratiques afin de centraliser toutes les etapes dans un seul doc et de le partager.
 > Projet en cours ,la documentations et des elements (fonctionnalités,securités) sont des taches en cours et adaptés à fur et à mesure
 
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
-tester prometheus et grafana pour une application JAVA avec MicroK8s : minikube
+> [!TIP]
+> Vous trouvez les tips en bas du de la page.
 
-Steps:
-depot app:
+##Steps:
+depot de l'app Java:
 https://github.com/spring-projects/spring-petclinic.git
 
 note : repo is safe
