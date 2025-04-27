@@ -53,7 +53,7 @@ Execution de l'app depuis maven </br>
 ![image](https://github.com/user-attachments/assets/24ae9d28-6061-43c0-ba37-6d7ba215685e)
 
 ### DB H2:
-H2 est un système de gestion de base de données relationnelles écrit en Java. Il peut être intégré à une application Java ou bien fonctionner en mode client-serveur. Son fichier jar est petit : environ 2.5 Mo
+H2 est un système de gestion de base de données relationnelles écrit en Java. Il peut être intégré à une application Java ou bien fonctionner en mode client-serveur. Son fichier jar est petit : environ 2.5 Mo </br>
 ![image](https://github.com/user-attachments/assets/a77c3277-1272-4706-af52-21a8f3d4dd11)
 conf db :
 
