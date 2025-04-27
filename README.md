@@ -32,7 +32,7 @@ Même si ce projet est sûr, voici quelques réflexes à garder pour n’importe
 + Jette un œil au fichier pom.xml pour voir les dépendances
 + Lancer d’abord en local dans un environnement isolé (ex: Docker ou VM)
 
-builder image docker :
+Builder image docker :
 ```
 probleme avec cmd : ./mvnw spring-boot:build-image
 debug 
@@ -49,10 +49,10 @@ root@mBELHADI1-PC:~# docker tag spring-petclinic:3.4.0-SNAPSHOT mohamedbelhedi/s
 Publier votre image
 root@mBELHADI1-PC:~# docker push mohamedbelhedi//spring-petclinic:latest
 ```
-Run l'app depuis maven:
+Run l'app depuis maven </br>
 ![image](https://github.com/user-attachments/assets/24ae9d28-6061-43c0-ba37-6d7ba215685e)
 
-DB H2:
+### DB H2:
 ![image](https://github.com/user-attachments/assets/a77c3277-1272-4706-af52-21a8f3d4dd11)
 conf db :
 
