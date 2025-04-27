@@ -1,7 +1,9 @@
-# Java-monitoring [Prometheus + Grafana]
+# Java-Deploiment-monitoring [Prometheus + Grafana]
 ## Tester prometheus et grafana pour une application JAVA avec MicroK8s : minikube , puis Kubeadm
 ###  Date :      Avril 2025
-
+### Stack technique et techno :
+Docker , Linux , Kubernetes , architecture des applications web , HA/HD , Git , Java , Github MK , Gestion projet , Experience utlisateurs , TTM , Web , Réseaux , WSL , VMwaire.
+@Mohamed BELHEDI :+1: linkedin https://www.linkedin.com/in/mohamed-b-17986b94/  :earth_africa:
 > [!NOTE]
 > Ceci n'est pas un tuto mais plutot le deploiment d'une app Java et la mise en place de la chaine de supervision
 > avec les problemes rencontrés
@@ -191,6 +193,7 @@ Reste à faire/implementer :warning:
 - [ ] Integrer d'autres services ( DB , API ... )
 - [ ] Migration vers kubeadm ( minikube reste limité)
 
+> ====================================== </br>
 > === Mohamed BELHEDI                === </br>
 > ===    *** ***** ***** ***         === </br>
 > === Architect Techinique           === </br>
