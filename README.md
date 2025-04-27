@@ -1,35 +1,36 @@
 # java-monitoring [Prometheus + Grafana]
-## Tester prometheus et grafana pour une application JAVA avec MicroK8s : minikube
-##  Date :      Avril 2025
+## Tester prometheus et grafana pour une application JAVA avec MicroK8s : minikube , puis Kubeadm
+###  Date :      Avril 2025
 
 > [!NOTE]
 > Ceci n'est pas un tuto mais plutot le deploiment d'une app Java et la mise en place de la chaine de supervision
 > avec les problemes rencontrés
 
 > [!IMPORTANT]
-> Il s'agit d'une montée en competence et recolte des données,bonnes pratiques afin de centraliser toutes les etapes dans un seul doc et de le partager.
-> Projet en cours ,la documentations et des elements (fonctionnalités,securités) sont des taches en cours et adaptés à fur et à mesure
+> Il s'agit d'une montée en competence la recolte des données et bonnes pratiques afin de centraliser toutes les etapes dans un seul doc et de le partager.
+> Projet en cours ,la documentation et des elements (fonctionnalités,securités) sont des taches en cours et adaptés à fur et à mesure.
+> Ce document peut avoir des fautes d'hortpghraphe,mise en page non respecté qui seront traités ultérieurement.
 
 > [!TIP]
 > Vous trouvez les tips en bas du de la page.
 
-##Steps:
-depot de l'app Java:
+## Steps:
+Depot de l'app Java:
 https://github.com/spring-projects/spring-petclinic.git
 
-note : repo is safe
-✅ Source officielle : Maintenu par Spring Projects, l’équipe qui développe le framework Spring, un des plus populaires pour les applications Java.
-✅ Utilisé à des fins pédagogiques : C’est une application de démonstration pour montrer les bonnes pratiques de Spring Boot (architecture, test, persistance, etc.).
-✅ Code open source : Il est ouvert à la communauté, très surveillé et régulièrement mis à jour.
-✅ Pas de dépendances malicieuses : Toutes les dépendances sont standards (Spring, H2, JPA, etc.) et gérées via Maven avec des versions bien connues.
+### Note : Vérifier toujours qu'il s'agit d'un repo safe (pour ce repo)
+- Source officielle : Maintenu par Spring Projects, l’équipe qui développe le framework Spring, un des plus populaires pour les applications Java.
++ Utilisé à des fins pédagogiques : C’est une application de démonstration pour montrer les bonnes pratiques de Spring Boot (architecture, test, persistance, etc.).
+* Code open source : Il est ouvert à la communauté, très surveillé et régulièrement mis à jour.
++ Pas de dépendances malicieuses : Toutes les dépendances sont standards (Spring, H2, JPA, etc.) et gérées via Maven avec des versions bien connues.
 
 conseils secu:
 Conseils de vérification (par bonne habitude) :
 Même si ce projet est sûr, voici quelques réflexes à garder pour n’importe quel repo :
-🔎 Vérifie les auteurs/mainteneurs (ici : spring-projects)
-📅 Regarde l’activité récente du dépôt (commits, issues)
-🧪 Jette un œil au fichier pom.xml pour voir les dépendances
-📁 Lancer d’abord en local dans un environnement isolé (ex: Docker ou VM)
++ Vérifie les auteurs/mainteneurs (ici : spring-projects)
++ Regarde l’activité récente du dépôt (commits, issues)
++ Jette un œil au fichier pom.xml pour voir les dépendances
++ Lancer d’abord en local dans un environnement isolé (ex: Docker ou VM)
 
 builder image docker :
 probleme avec cmd : ./mvnw spring-boot:build-image
@@ -130,7 +131,7 @@ Alternative Microk8s : https://microk8s.io/compare
 kubectl delete deployment mon-app-java
 kubectl apply -f deployment.yaml
 
-A faire
+Reste à faire/implementer
 - [ ] Développer les tableaux de board Grafana :tada:
 - [ ] Rajouter notifications Grafana (adresse e mail test + conf smtp
 - [ ] Integrer d'autres services ( DB , API ... )
