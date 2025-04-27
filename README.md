@@ -159,6 +159,8 @@ spec:
           type: Utilization
           averageUtilization: 50
 ```
+Déployer le hpa.yml </br>  
+```
 kubectl apply -f hpa.yaml
 kubectl get hpa
 ```
