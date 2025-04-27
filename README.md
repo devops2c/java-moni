@@ -105,7 +105,7 @@ docker run -p 8080:8080 mon-app-java:v1
 
 ### Il existe 3 facons pour acceder/utliliser à lapp
 ### 1 Utiliser un Service de type NodePort avec creation tunnel entre ton pc et le service kub
-ajouter/modifer service.yml comme suite:
+Ajouter/modifer service.yml comme suite: </br> 
 ```
 type: NodePort
 nodePort: 30080
@@ -138,7 +138,8 @@ Tu vas recevoir une IP externe directe , dans notre cas elle est 127.0.0.1 (loca
 ### Installe metrics-server qui permet de superviser la charge appliquée </br>
 ```
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
-ajouter hpa.yaml:
+```
+Ajouter hpa.yaml comme suite:
 ```
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -159,6 +160,7 @@ spec:
           type: Utilization
           averageUtilization: 50
 ```
+Ici : si la cpu dépasse 50% d'utilisation il va scaller
 Déployer le hpa.yml </br>  
 ```
 kubectl apply -f hpa.yaml
